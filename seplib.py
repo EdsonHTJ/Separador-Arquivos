@@ -9,8 +9,7 @@ def separar(path,number):
         open(newPath,'wb').write(newfile)
 
 def juntar(path):
-    NewPath = path[2:-2]
-    #print(NewPath)
+    NewPath = path[:-2]
     i=0
     found  = 1
     newfile = ''
@@ -30,6 +29,6 @@ def juntar(path):
         
         i+=1
 
-
-    open(NewPath,'wb').write(newfile)
+   # print(newfile)
+    open(NewPath,'wb').write(bytes(newfile))
     
